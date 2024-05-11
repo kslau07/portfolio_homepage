@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    hello, world!
+    <header class="header grid">
+      <picture class="header__picture">
+        <source
+          media="(min-width: 900px)"
+          srcset="./assets/worker-original.png"
+        />
+        <source
+          media="(min-width: 500px)"
+          srcset="./assets/worker-cropped-tablet.png"
+        />
+        <img
+          src="./assets/worker-cropped-mobile.png"
+          alt="Vector graphic of an office worker"
+        />
+      </picture>
+      <div class="header__name serif black">Sam Lau</div>
+    </header>
   </body>
 </html>

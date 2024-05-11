@@ -14,6 +14,12 @@ html {
   color-scheme: dark light;
 }
 
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  line-height: 1.5;
+}
+
 img,
 picture,
 svg,
@@ -29,11 +35,6 @@ select {
   font: inherit;
 }
 
-body {
-  min-height: 100vh;
-  min-height: 100svh;
-}
-
 h1,
 h2,
 h3,
@@ -41,6 +42,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 p {

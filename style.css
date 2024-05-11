@@ -1,5 +1,64 @@
-/*style.css*/
+/*Separate classes: layout vs. style*/
+
 body {
-  font-size: 1.125rem;
-  color: red;
+  --white: #fafaf9;
+  --black: #0c0a09;
+  --color-accent: hsl(191, 75%, 45%);
+
+  /*fonts*/
+  --serif: "Playfair Display", serif;
+  --sans-serif: system-ui;
+}
+
+.serif {
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.color-accent {
+  color: var(--color-accent);
+}
+
+.grid {
+  display: grid;
+}
+
+.header {
+  background: linear-gradient(
+    140deg,
+    var(--color-accent),
+    var(--color-accent) 50%,
+    var(--white) 50%,
+    var(--white)
+  );
+  padding: var(--space-lg) var(--space-lg) 0 var(--space-lg);
+  border: 3px solid red;
+
+  grid-template-rows: [picture-start name-start] auto [picture-end name-end];
+  grid-template-columns: [picture-start name-start] auto [picture-end name-end];
+}
+
+.header__picture {
+  grid-row: picture;
+  grid-column: picture;
+}
+
+.header__picture img {
+  width: 100%;
+}
+
+.header__name {
+  grid-row: name;
+  grid-column: name;
+  align-self: end;
+  font-size: 25vw;
 }
