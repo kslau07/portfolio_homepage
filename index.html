@@ -14,22 +14,36 @@
     />
   </head>
   <body>
-    <header class="header grid">
-      <picture class="header__picture">
-        <source
-          media="(min-width: 900px)"
-          srcset="./assets/worker-original.png"
-        />
-        <source
-          media="(min-width: 500px)"
-          srcset="./assets/worker-cropped-tablet.png"
-        />
-        <img
-          src="./assets/worker-cropped-mobile.png"
-          alt="Vector graphic of an office worker"
-        />
-      </picture>
-      <div class="header__name serif black">Sam Lau</div>
+    <header class="header">
+      <div class="header-inner shadow">
+        <div class="photo-wrapper shadow">
+          <picture class="photo__image">
+            <source
+              media="(min-width: 900px)"
+              srcset="./assets/worker-original.png"
+            />
+            <source
+              media="(min-width: 500px)"
+              srcset="./assets/worker-cropped-tablet.png"
+            />
+            <img
+              src="./assets/worker-cropped-mobile.png"
+              alt="Vector graphic of an office worker"
+            />
+          </picture>
+          <div class="photo__name serif white">Sam Lau</div>
+        </div>
+        <h2 class="about-me__title black serif">About me</h2>
+        <div class="about-me__content black">
+          Cras adipiscing enim eu turpis egestas pretium aenean pharetra, magna.
+          Porta lorem mollis aliquam ut porttitor. Id ornare arcu odio ut sem
+          nulla pharetra diam sit. Nec dui nunc mattis enim ut tellus elementum
+          sagittis vitae et leo duis ut! Nisl suscipit adipiscing bibendum est
+          ultricies integer quis auctor elit sed vulputate mi sit amet mauris
+          commodo quis imperdiet massa tincidunt. Est velit egestas dui, id
+          ornare arcu odio ut sem nulla pharetra diam sit amet?
+        </div>
+      </div>
     </header>
   </body>
 </html>
