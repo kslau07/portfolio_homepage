@@ -1,5 +1,18 @@
 /*Separate classes: layout vs. style*/
 
+.outline-green {
+  outline: 5px dashed green;
+}
+.outline-red {
+  outline: 5px dotted red;
+}
+.outline-blue {
+  outline: 5px dashed blue;
+}
+.border-pink {
+  border: 3px dotted pink;
+}
+
 body {
   --white: #fafaf9;
   --black: #0c0a09;
@@ -42,14 +55,11 @@ body {
     var(--white)
   );
   padding: var(--space-lg) var(--space-lg) 0 var(--space-lg);
-  /* border: 3px solid red; */
 }
 .header-inner {
   background-color: var(--white);
 }
 .photo-wrapper {
-  /* position: relative; */
-  /* border: 5px solid green; */
 }
 .photo__name {
   font-size: 3rem;
@@ -59,17 +69,16 @@ body {
 
 .about-me__title {
   text-align: center;
-  /* border: 2px solid maroon; */
+  margin: 0.5em 0;
 }
 .about-me__content {
-  /* border: 3px solid blue; */
   padding: 0 3rem 3rem calc(1rem + 3vw);
 }
 
 /* Tablets */
 @media (min-width: 500px) {
   .header {
-    padding: 5rem calc(2rem + 5vw) 0 calc(2rem + 5vw);
+    padding: calc(48px + 4vw) calc(40px + 4vw);
     background: linear-gradient(
       165deg,
       var(--color-accent),
@@ -79,7 +88,6 @@ body {
     );
   }
   .photo-wrapper {
-    /* height: 10%; */
     float: left;
     margin-right: 25px;
     margin-bottom: 5px;
@@ -88,7 +96,7 @@ body {
     transform-origin: bottom right;
   }
   .photo-wrapper img {
-    height: calc(200px + 10vw);
+    height: calc(200px + 4vw);
   }
   .photo__name {
     font-size: 3rem;
@@ -104,4 +112,29 @@ body {
 
 /* Desktops */
 @media (min-width: 900px) {
+  .header {
+    margin: 0;
+    padding: calc(30px + 5vw) 5vw 0;
+  }
+  .header-inner {
+    margin: 0 auto;
+    max-width: 900px;
+    height: min(33vw, 350px);
+  }
+  .photo-wrapper {
+    margin: 0 calc(70px + 4vw) 0 0;
+    position: relative;
+    transform: none;
+    transform-origin: none;
+  }
+  .photo-wrapper img {
+    height: min(33vw, 350px);
+    transform: scale(1.2);
+    transform-origin: center left;
+  }
+  .photo__name {
+  }
+  .about-me__title {
+    text-align: left;
+  }
 }
