@@ -17,10 +17,13 @@ body {
   --white: #fafaf9;
   --black: #0c0a09;
   --color-accent: hsl(191, 75%, 45%);
+  --max-width: 900px;
 
   /*fonts*/
   --serif: "Playfair Display", serif;
-  --sans-serif: system-ui;
+  /*normal font is a sans-serif font*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .serif {
@@ -46,6 +49,18 @@ body {
     drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
 }
 
+.text-shadow {
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 0.3);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
 .header {
   background: linear-gradient(
     140deg,
@@ -62,23 +77,84 @@ body {
 .photo-wrapper {
 }
 .photo__name {
-  font-size: 3rem;
+  font-size: 15vw;
   position: absolute;
   bottom: 0px;
+  margin-left: 15px;
 }
 
 .about-me__title {
   text-align: center;
-  margin: 0.5em 0;
+  margin: 1.5em 0 0.5em;
 }
 .about-me__content {
   padding: 0 3rem 3rem calc(1rem + 3vw);
+}
+.social-links {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding-top: 1.5em;
+  color: black;
+}
+.social-links a:link,
+.social-links a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.cards {
+  max-width: var(--max-width);
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: 1em;
+  justify-content: end;
+}
+
+.card {
+  height: 400px;
+  width: 325px;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 0.3);
+}
+
+.card__image {
+  height: 240px;
+  width: 100%;
+  background-color: salmon;
+  display: grid;
+  place-items: center;
+}
+.card__image > h2 {
+  display: block;
+  max-width: 65%;
+  font-size: 2.25rem;
+  text-align: center;
+}
+.card__text {
+  margin: 0.375em auto;
+  width: 85%;
+}
+.card__header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.375em;
+}
+.card__title {
+}
+.card__links {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.card__links > * {
+  display: inline-block;
+  width: 22px;
 }
 
 /* Tablets */
 @media (min-width: 500px) {
   .header {
-    padding: calc(48px + 4vw) calc(40px + 4vw);
+    padding: calc(33px + 4vw) calc(30px + 4vw);
     background: linear-gradient(
       165deg,
       var(--color-accent),
@@ -92,18 +168,19 @@ body {
     margin-right: 25px;
     margin-bottom: 5px;
     position: relative;
-    transform: scale(1.2) translate(10px, 0);
+    transform: scale(1.2) translate(10px, -5px);
     transform-origin: bottom right;
   }
   .photo-wrapper img {
     height: calc(200px + 4vw);
   }
   .photo__name {
-    font-size: 3rem;
+    font-size: 2.25rem;
     position: absolute;
-    top: 0;
-    left: calc(75%);
+    top: -5%;
+    left: 105%;
     width: max-content;
+    margin: 0px;
   }
   .about-me__title {
     padding-top: 3rem;
@@ -111,14 +188,18 @@ body {
 }
 
 /* Desktops */
+/*
+  TODO: Use same padding for header and main. How?
+        We can use % or padding.
+*/
 @media (min-width: 900px) {
   .header {
     margin: 0;
-    padding: calc(30px + 5vw) 5vw 0;
+    padding: calc(15px + 5vw) 5vw 0;
   }
   .header-inner {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: var(--max-width);
     height: min(33vw, 350px);
   }
   .photo-wrapper {
@@ -133,8 +214,25 @@ body {
     transform-origin: center left;
   }
   .photo__name {
+    font-size: 3.25rem;
+    position: absolute;
+    top: calc(88%);
+    left: 5%;
+    width: max-content;
+    margin: 0px;
   }
   .about-me__title {
     text-align: left;
+    padding-top: 1.5rem;
+  }
+  .social-links {
+    padding: 0;
+    position: absolute;
+    bottom: 15px;
+    right: 3em;
+  }
+
+  main {
+    padding: calc(15px + 5vw) 5vw 3rem;
   }
 }
