@@ -48,3 +48,16 @@ h1,
 .text-xxxxl {
   font-size: var(--text-xxxxl);
 }
+
+.outline-green {
+  outline: 5px dashed green;
+}
+.outline-red {
+  outline: 5px dotted red;
+}
+.outline-blue {
+  outline: 5px dashed blue;
+}
+.border-pink {
+  border: 3px dotted pink;
+}
