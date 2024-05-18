@@ -27,9 +27,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-inner">
-        <div class="photo-wrapper shadow">
-          <picture class="photo__image">
+      <div class="header__container">
+        <div class="header__photo-container shadow">
+          <picture class="header__photo">
             <source
               media="(min-width: 900px)"
               srcset="./assets/worker-original.png"
@@ -43,18 +43,20 @@
               alt="Cartoon of an office worker"
             />
           </picture>
-          <div class="photo__name serif text-white text-shadow">Sam Lau</div>
+          <div class="header__photo-name serif text-white text-shadow">
+            Sam Lau
+          </div>
         </div>
-        <h2 class="about-me__title text-black serif">About me</h2>
-        <div class="about-me__content text-black">
-          Cras adipiscing enim eu turpis egestas pretium aenean pharetra, magna.
-          Porta lorem mollis aliquam ut porttitor. Id ornare arcu odio ut sem
-          nulla pharetra diam sit. Nec dui nunc mattis enim ut tellus elementum
-          sagittis vitae et leo duis ut! Nisl suscipit adipiscing bibendum est
-          ultricies integer quis auctor elit sed vulputate mi sit amet mauris
-          commodo quis imperdiet massa tincidunt.
+        <h2 class="header__title text-black serif">About me</h2>
+        <div class="header__content text-black">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at
+          tristique lectus, ut varius sapien. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae; Mauris
+          consectetur quam non leo dapibus consectetur. Vestibulum suscipit eros
+          eget finibus consectetur. Mauris consectetur nunc tempus ex sodales,
+          in fringilla dui consequat.
         </div>
-        <div class="social-links">
+        <div class="social-links social-links--header">
           <a href="#"><i class="devicon-github-original colored"></i></a>
           <a href="#"><i class="devicon-twitter-original"></i></a>
           <a href="#"><i class="devicon-linkedin-plain"></i></a>
@@ -63,7 +65,7 @@
     </header>
     <main class="main">
       <h2 class="main__title serif">My Work</h2>
-      <div class="main__inner grid">
+      <div class="main__container grid">
         <article class="card shadow">
           <div class="card__image">
             <h2 class="serif text-white">screenshot of project</h2>
@@ -169,35 +171,39 @@
       </div>
     </main>
     <footer class="footer text-white">
-      <div class="footer__inner grid">
+      <div class="footer__container grid">
         <div class="footer__text">
-          <h1 class="serif">Contact Me</h1>
-          <p>
+          <h2 class="footer__title serif">Contact Me</h2>
+          <div class="footer__line">
             Please get in touch if you think our work could be mutually
             beneficial!
-          </p>
-          <div>
+          </div>
+          <div class="footer__line">
             1234 Random Road<br />
             Random Town, California 12345
           </div>
-          <div>555-555-5555 myemail@example.com</div>
+          <div class="footer__line">555-555-5555</div>
+          <div class="footer__line">myemail@example.com</div>
+          <div class="social-links social-links--footer">
+            <a href="#"><i class="devicon-github-original colored"></i></a>
+            <a href="#"><i class="devicon-twitter-original"></i></a>
+            <a href="#"><i class="devicon-linkedin-plain"></i></a>
+          </div>
         </div>
-        <div class="footer__image">
-          <picture class="photo__image">
-            <source
-              media="(min-width: 900px)"
-              srcset="./assets/man-cliff-wide-900w.jpg"
-            />
-            <source
-              media="(min-width: 100px)"
-              srcset="./assets/man-cliff-narrow-500w.jpg"
-            />
-            <img
-              src="./assets/man-cliff-narrow-500w.jpg"
-              alt="Man standing on edge of cliff"
-            />
-          </picture>
-        </div>
+        <picture class="footer__image">
+          <source
+            media="(min-width: 900px)"
+            srcset="./assets/man-cliff-wide-900w.jpg"
+          />
+          <source
+            media="(min-width: 100px)"
+            srcset="./assets/man-cliff-narrow-500w.jpg"
+          />
+          <img
+            src="./assets/man-cliff-narrow-500w.jpg"
+            alt="Man standing on edge of cliff"
+          />
+        </picture>
       </div>
     </footer>
   </body>
