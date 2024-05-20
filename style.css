@@ -303,7 +303,9 @@ body {
   .footer__text {
     margin: 0px;
     padding: 0px;
+    display: grid;
   }
+
   .footer__title {
   }
 
@@ -315,6 +317,7 @@ body {
 
   .social-links--footer {
     justify-content: start;
+    align-items: end;
   }
 }
 
